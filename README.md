@@ -14,9 +14,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-##how to run
+## How to Run
 
-From the parent folder , in a terminal / command prompt run node index.js whcih will make the bakend node API ready for tweet service.
+This App consists of two parts , one for Node API and another Angular Client.
+
+Do `npm install' under parent folder for node.js dependencies and use `npm install` under client folder for Angular DEV server. for Prod dist folder exists.
+
+From the parent folder , in a terminal / command prompt run `node index.js' whcih will make the bakend node API ready for tweet service. 
 
 Now from another terminal go to the client folder , if you are using 
 dev server , use `ng serve` which will open the front end on `http://localhost:4200/`.
