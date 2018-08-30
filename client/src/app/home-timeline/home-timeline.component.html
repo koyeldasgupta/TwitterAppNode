@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="d-none d-sm-block">
+    <div class="row header">
+      <div class="col-sm-3">
+        <img src={{user.profileImageUrl}} alt="No image avaiable">
+      </div>
+      <div class="col-sm-9 user-name">
+        {{user.name}}
+        <div class="user-name__tid"><span>@{{user.screenName}}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="row user-info">
+    <div class="col-sm-3 col-3">
+      <div class="user-name-xs d-sm-none"> 
+        {{user.name}}
+        <div class="user-name-xs__tid">@{{user.screenName}}</div>
+      </div>
+    </div>
+    <div class="col-sm-2 col-3">
+      <label>Tweets</label> 
+      <div>{{user.statusesCount}}</div>
+    </div>
+    <div class="col-sm-2 col-3">
+      <label>Following</label>
+      <div>{{user.following}}</div>
+    </div>
+    <div class="col-sm-2 col-3">
+      <label>Followers</label> 
+      <div>{{user.followersCount}}</div>
+    </div>
+  </div>
+  <h5 *ngIf="user.tweets.length!=0" >Tweets</h5>
+  <div class="row tweet-content" *ngFor="let tweet of user.tweets">
+    <div class="col-sm-12">
+      <div class="date"> {{tweet.createdAt | dateTransform }}</div>
+       <div class="status">{{tweet.status}}</div>
+    </div>
+  </div>
+</div>

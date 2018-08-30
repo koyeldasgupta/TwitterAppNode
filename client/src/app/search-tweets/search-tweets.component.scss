@@ -1,0 +1,62 @@
+
+#search-twiiter{
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    input{
+      width:350px;
+      border-radius: 20px;
+    }
+    i{
+        margin-left: -30px;
+        margin-top: 11px;
+        color: #495057;
+        cursor: pointer;
+    }
+}
+
+
+.content-row{
+    background-color:#e8f1ff;
+    margin-top: 20px;
+    border: 1px solid #d4d7db;
+    min-height: 140px;
+    padding: 10px;
+    .image{
+        margin:auto;
+    }
+    .tweet-info{
+        margin:10px;
+        color: #585656;
+        font-size: 14px;
+        label{
+            font-weight: bold; 
+        }  
+    }
+    .user-name{ 
+        margin:10px 10px 0px 10px;
+        font-weight: bold;
+        color: #157dc7;
+        font-size: 17px;
+
+        span{
+            color: #585656;
+            font-size:12px;
+            font-weight: normal;
+        }
+        
+    }
+
+    .status-row{
+        margin:0px 10px 10px 10px;
+        font-size: 14px;
+        color: #0d2838;
+    }
+    
+ }
+
+h4{
+    font-style: italic;
+}
+
+

@@ -1,0 +1,46 @@
+<div>
+  <div class="row" id="search-twiiter">
+    <input
+      (keyup.enter)="searchTweets(searchQuery.value)" 
+      #searchQuery
+      class="form-control"
+      type="text" 
+      placeholder="Search Twitter">
+    <i (click)="searchTweets(searchQuery.value)" class="fa fa-search"></i>
+  </div>
+  <div class="container">
+    <h4 *ngIf="tweets.length!=0" >Tweets</h4>
+    <h4 *ngIf="notFound">No tweets found.</h4>
+    <div *ngFor="let tweet of tweets">
+      <div class="row content-row" > 
+          <div class="col-sm-2 col-12 image">
+              <img src={{tweet.profileImageUrl}} alt="No image avaiable" width="100px" heigth="100px">
+          </div>
+          <div class="col-sm-10 col-12">
+            <div class="row tweet-info">
+                <div class="col-sm-4 col-3">
+                  <label>Tweets</label> {{tweet.statusesCount}}
+                </div>
+                <div class="col-sm-4 col-3">
+                  <label>Following</label> {{tweet.following}}
+                </div>
+                <div class="col-sm-4 col-3">
+                  <label>Followers</label> {{tweet.followersCount}}
+                </div>
+            </div>
+            <div class="row user-name">
+                <div class="col-12">{{tweet.name}}
+                  <span>@{{tweet.screenName}}</span>
+                  <span>  -{{tweet.createdAt | dateTransform}}</span>
+                </div>
+            </div>
+            <div class="row status-row">
+              <div class="col-12">
+                {{tweet.status}}
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+</div>
